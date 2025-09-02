@@ -12,6 +12,7 @@
    <button id="enter" onclick="addListAfterClick()">Enter</button>
    <ul id="myul">
       <li>Notebook
+         <button onclick="remove(this.parentNode)">delete</button>
       </li>
       <li>Jello
          <button onclick="remove(this.parentNode)">delete</button>
@@ -62,7 +63,7 @@
       function createNewItem(item) {
          var ul = document.getElementsByTagName("ul")[0];
          var li = document.createElement("li");
-         var textNode = document.createTextNode(item.value);
+         var textNode = document.createTextNode(item.value + "fsfds");
          li.appendChild(textNode);
 
          var btn = document.createElement("button")
